@@ -1,0 +1,28 @@
+server:
+  port: 8764
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8
+    username: root
+    password:
+  application:
+    name: eureka-demo3
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+tx-lcn:
+  client:
+    manager-address: 192.168.5.213:8070
+    resource-order: 0
+  logger:
+    enabled: false
+  message:
+    netty:
+      wait-time: 5000
+  springcloud:
+    loadbalance:
+      enabled: false
